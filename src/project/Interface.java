@@ -165,6 +165,8 @@ public class Interface extends JFrame{
 					System.out.println("Protocol Number: "+SaveSettings.SAVE_DATALINK_PROTOCOL);
 					System.out.println("Scheme Number: "+SaveSettings.SAVE_DATALINK_SCHEME);
 					System.out.println("PhysicalLink Number: "+SaveSettings.SAVE_PHYSICALLINK);
+					SenderMain sendWork = new SenderMain();
+					sendWork.startWork();
 					dispose();
 				}
 				
@@ -265,6 +267,8 @@ public class Interface extends JFrame{
 					System.out.println("Protocol Number: "+SaveSettings.SAVE_DATALINK_PROTOCOL);
 					System.out.println("Scheme Number: "+SaveSettings.SAVE_DATALINK_SCHEME);
 					System.out.println("PhysicalLink Number: "+SaveSettings.SAVE_PHYSICALLINK);
+					ReceiverMain workingRec = new ReceiverMain();
+					workingRec.startWork();
 					dispose();
 				}
 				
