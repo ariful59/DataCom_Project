@@ -11,9 +11,6 @@ import java.io.FileNotFoundException;
 
 import javax.swing.*;
 
-import com.sun.java_cup.internal.runtime.Scanner;
-import com.sun.javafx.tk.Toolkit;
-
 /**
  * 
  * @author anando
