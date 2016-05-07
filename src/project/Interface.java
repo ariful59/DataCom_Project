@@ -100,7 +100,7 @@ public class Interface extends JFrame{
 		private JButton Load; 
 		SendInterface(){
 			super("Sender");
-			setLayout(new FlowLayout());
+			setLayout(new FlowLayout(FlowLayout.CENTER,10,30));
 			
 			//Default SaveSettings
 			SaveSettings.SAVE_DATALINK_PROTOCOL=1;
