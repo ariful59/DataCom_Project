@@ -45,14 +45,22 @@ public class Sender {
 	private String dh(String str){
 		String tmp = cnv.toBinary("D-H");
 		String tail= cnv.toBinary("D-T");
+		if(SaveSettings.SAVE_DATALINK_SCHEME == 1){ //CRC-32 selected
+			CRC C = new CRC();
+			str = C.encode(str);
+		}
 		return phh(tmp + str + tail);
 	}
 	
 	//Physical Layer
 	private String phh(String str){
-		//String tmp = cnv.StringToBinary("PH-H");
-		//return (tmp + str);
-		return str;
+		String tmp = cnv.toBinary("PH-H");
+		if(SaveSettings.SAVE_PHYSICALLINK==6){
+			FourBFiveB Four = new FourBFiveB();
+			str = Four.encode(str);
+		}
+		return (tmp + str);
+		//return str;
 	}
 	//Call this to get OSI sender
 	public String getSender(String str){

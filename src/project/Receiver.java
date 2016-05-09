@@ -46,15 +46,28 @@ public class Receiver {
 	//DataLink Layer
 	private String dh(String str){
 		int len = str.length();
-		String ans = str.substring(3, len - 3);
+		String ans = str.substring(24, len - 24);
+		if(SaveSettings.SAVE_DATALINK_SCHEME == 1){  //CRC-32 Selected
+			CRC C = new CRC();
+			ans = C.decode(ans);
+			if(ans.equals("")){
+				return "$???????????????????$";
+			}
+		}
+		BinaryConverter cnv = new BinaryConverter();
+		ans = cnv.fromBinary(ans);
 		return nh(ans);
 	}
 	
 	//Physical Layer
 	private String phh(String str){
-		//String ans = str.substring(4);
-		//return dh(ans);
-		return dh(str);
+		String ans = str.substring(32);
+		if(SaveSettings.SAVE_PHYSICALLINK==6){
+			FourBFiveB Four = new FourBFiveB();
+			ans = Four.decode(ans);
+		}
+		return dh(ans);
+		//return dh(str);
 	}
 	
 	public String getReceiver(String str){

@@ -17,6 +17,7 @@ public class SaveSettings {
 	SaveSettings(){
 		
 	}
+	public static Integer SAVE_INPUT_NUMBER;
 	public static Integer SAVE_MODE; //1 for Sender. 2 for Receiver
 	public static Integer SAVE_DATALINK_SCHEME; // 0 for Hamming Distance . 1 for CRC
 	public static Integer SAVE_DATALINK_PROTOCOL; //0 for GO BACK N . 1 for Selective Repeat

@@ -14,35 +14,17 @@ public class CRCReceiver {
 		String str="";
 		while(!fin.isEOF()){
 			str = "";
-			str = fin.takeInput(1400);
+			str = fin.takeInput(1782);
 			count = str.length();
-			if(count == 1400){
+			if(count == 1782){
 				count = 0;
-				CRC C = new CRC();
-				str = C.decode(str);
-				if(str.equals("")){
-					fout.writeFile("???????????????");
-					continue;
-				}
-				
-				BinaryConverter cnv = new BinaryConverter();
-				str = cnv.fromBinary(str);
 				str = rcvr.getReceiver(str);
 				fout.writeFile(str);
 			}
 		}
 		if(count !=0){
-			CRC C = new CRC();
-			str = C.decode(str);
-			if(str.equals("")){
-				fout.writeFile("???????????????");
-			}
-			else{
-				BinaryConverter cnv = new BinaryConverter();
-				str = cnv.fromBinary(str);
-				str = rcvr.getReceiver(str);
-				fout.writeFile(str);
-			}
+			str = rcvr.getReceiver(str);
+			fout.writeFile(str);
 			count = 0;
 		}
 		fout.closeFile();
