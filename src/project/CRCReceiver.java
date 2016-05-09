@@ -1,13 +1,28 @@
 package project;
 
+import java.awt.Frame;
+import java.io.File;
 import java.io.IOException;
 
-public class CRCReceiver {
+import javax.swing.JFileChooser;
+
+public class CRCReceiver extends Frame {
 	public void doCRC()throws IOException{
 		FileInputClass fin = new FileInputClass();
 		FileOutputClass fout = new FileOutputClass();
+		String fileAddress ="";
+		
+		JFileChooser fileChooser = new JFileChooser();
+		fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
+		int result = fileChooser.showOpenDialog(this);
+		if (result == JFileChooser.APPROVE_OPTION) {
+		    File selectedFile = fileChooser.getSelectedFile();
+		    System.out.println("Selected file: " + selectedFile.getAbsolutePath());
+		    fileAddress = selectedFile.getAbsolutePath();
+		}
+		
 		fin.setFileName("Files/Temp_File/temp.txt");
-		fout.setFileName("Files/Output_Files/outCRC.txt");
+		fout.setFileName(fileAddress);
 		
 		Receiver rcvr = new Receiver();
 		int count = 0;

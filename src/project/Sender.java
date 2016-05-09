@@ -75,6 +75,10 @@ public class Sender {
 			Manchester man = new Manchester();
 			str = man.encode(str);
 		}
+		else if(SaveSettings.SAVE_PHYSICALLINK == 4){
+			Diff_Manchester diff_man = new Diff_Manchester();
+			str = diff_man.encode(str);
+		}
 		
 		return (tmp + str);
 		//return str;

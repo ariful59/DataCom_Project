@@ -82,6 +82,10 @@ public class Receiver {
 			Manchester man = new Manchester();
 			ans = man.decode(ans);
 		}
+		else if(SaveSettings.SAVE_PHYSICALLINK == 4){
+			Diff_Manchester diff_man = new Diff_Manchester();
+			ans = diff_man.decode(ans);
+		}
 		return dh(ans);
 		//return dh(str);
 	}
