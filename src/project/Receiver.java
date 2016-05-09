@@ -66,6 +66,22 @@ public class Receiver {
 			FourBFiveB Four = new FourBFiveB();
 			ans = Four.decode(ans);
 		}
+		else if(SaveSettings.SAVE_PHYSICALLINK == 0){
+			NRZ_L nrz_l = new NRZ_L();
+			ans = nrz_l.decode(ans);
+		}
+		else if(SaveSettings.SAVE_PHYSICALLINK == 1){
+			NRZ_I nrz_i = new NRZ_I();
+			ans = nrz_i.decode(ans);
+		}
+		else if(SaveSettings.SAVE_PHYSICALLINK == 2){
+			RZ rz = new RZ();
+			ans = rz.decode(ans);
+		}
+		else if(SaveSettings.SAVE_PHYSICALLINK == 3){
+			Manchester man = new Manchester();
+			ans = man.decode(ans);
+		}
 		return dh(ans);
 		//return dh(str);
 	}

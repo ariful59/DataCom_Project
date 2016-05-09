@@ -1,4 +1,4 @@
-package datacom;
+package project;
 
 public class RZ{
     String out;

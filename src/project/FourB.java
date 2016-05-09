@@ -1,4 +1,4 @@
-package datacom;
+package project;
 
 import java.util.Random;
 

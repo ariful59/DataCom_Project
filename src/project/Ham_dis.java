@@ -1,4 +1,4 @@
-package lab7a;
+package project;
 
 import java.util.Random;
 

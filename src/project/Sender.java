@@ -59,6 +59,23 @@ public class Sender {
 			FourBFiveB Four = new FourBFiveB();
 			str = Four.encode(str);
 		}
+		else if(SaveSettings.SAVE_PHYSICALLINK == 0){
+			NRZ_L nrz_l = new NRZ_L();
+			str = nrz_l.encode(str);
+		}
+		else if(SaveSettings.SAVE_PHYSICALLINK == 1){
+			NRZ_I nrz_i = new NRZ_I();
+			str = nrz_i.encode(str);
+		}
+		else if(SaveSettings.SAVE_PHYSICALLINK == 2){
+			RZ rz = new RZ();
+			str = rz.encode(str);
+		}
+		else if(SaveSettings.SAVE_PHYSICALLINK == 3){
+			Manchester man = new Manchester();
+			str = man.encode(str);
+		}
+		
 		return (tmp + str);
 		//return str;
 	}

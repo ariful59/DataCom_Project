@@ -14,9 +14,9 @@ public class CRCReceiver {
 		String str="";
 		while(!fin.isEOF()){
 			str = "";
-			str = fin.takeInput(1782);
+			str = fin.takeInput(2832);
 			count = str.length();
-			if(count == 1782){
+			if(count == 2832){
 				count = 0;
 				str = rcvr.getReceiver(str);
 				fout.writeFile(str);
