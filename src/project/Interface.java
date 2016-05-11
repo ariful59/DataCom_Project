@@ -8,6 +8,7 @@ import java.awt.GridLayout;
 import java.awt.event.*;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import javax.swing.*;
 
@@ -165,8 +166,13 @@ public class Interface extends JFrame{
 					System.out.println("Protocol Number: "+SaveSettings.SAVE_DATALINK_PROTOCOL);
 					System.out.println("Scheme Number: "+SaveSettings.SAVE_DATALINK_SCHEME);
 					System.out.println("PhysicalLink Number: "+SaveSettings.SAVE_PHYSICALLINK);
-					SenderMain sendWork = new SenderMain();
-					sendWork.startWork();
+					
+					SenderMain crc = new SenderMain();
+					try{
+						crc.doJob();
+					}catch(IOException excep){
+						System.out.println(excep);
+					}
 					dispose();
 				}
 				
@@ -267,8 +273,13 @@ public class Interface extends JFrame{
 					System.out.println("Protocol Number: "+SaveSettings.SAVE_DATALINK_PROTOCOL);
 					System.out.println("Scheme Number: "+SaveSettings.SAVE_DATALINK_SCHEME);
 					System.out.println("PhysicalLink Number: "+SaveSettings.SAVE_PHYSICALLINK);
-					ReceiverMain workingRec = new ReceiverMain();
-					workingRec.startWork();
+					
+					ReceiverMain crc = new ReceiverMain();
+					try{
+						crc.doJob();
+					}catch(Exception excep){
+						System.out.println(excep);
+					}
 					dispose();
 				}
 				
