@@ -27,6 +27,7 @@ public class SenderMain extends Frame{
 		inp.setFileName(fileAddress);
 		otp.setFileName("Files/Temp_File/temp.txt");
 		SaveSettings.SAVE_INPUT_NUMBER = 0;
+		SendSocket sending = new SendSocket();
 		
 		Sender sndr = new Sender();
 		while(!inp.isEOF()){
@@ -34,10 +35,14 @@ public class SenderMain extends Frame{
 			for(int i=str.length();i<150;i++)str+=" ";
 			str = cnv.toBinary(str);
 			str = sndr.getSender(str);
-			System.out.println(str.length());
+			System.out.println("sender length : " + str.length());
 			SaveSettings.SAVE_INPUT_NUMBER = Math.max(SaveSettings.SAVE_INPUT_NUMBER, str.length());
-			otp.writeFile(str);
+			//otp.writeFile(str);
+			sending.Send(str);
 		}
+		sending.Send("*");
+		sending.Close();
+		System.out.println("CLOSED Sender");
 		System.out.println(SaveSettings.SAVE_INPUT_NUMBER);
 		otp.closeFile();
 	}

@@ -49,6 +49,10 @@ public class Sender {
 			CRC C = new CRC();
 			str = C.encode(str);
 		}
+		else if(SaveSettings.SAVE_DATALINK_SCHEME == 0){
+			Ham_dis ham = new Ham_dis();
+			str = ham.encode(str);
+		}
 		return phh(tmp + str + tail);
 	}
 	
