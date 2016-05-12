@@ -43,7 +43,7 @@ public class Sender {
 	
 	//Datalink Layer
 	private String dh(String str){
-		String tmp = cnv.toBinary("D-H");
+		String tmp = cnv.toBinary("DH-H");
 		String tail= cnv.toBinary("D-T");
 		if(SaveSettings.SAVE_DATALINK_SCHEME == 1){ //CRC-32 selected
 			CRC C = new CRC();
@@ -51,7 +51,8 @@ public class Sender {
 		}
 		else if(SaveSettings.SAVE_DATALINK_SCHEME == 0){
 			Ham_dis ham = new Ham_dis();
-			str = ham.encode(str);
+			str = ham.encode(tmp+str+tail);
+			return phh(str);
 		}
 		return phh(tmp + str + tail);
 	}
@@ -59,32 +60,34 @@ public class Sender {
 	//Physical Layer
 	private String phh(String str){
 		String tmp = cnv.toBinary("PH-H");
-		if(SaveSettings.SAVE_PHYSICALLINK==6){
+		String Block = "";
+		if(SaveSettings.SAVE_BLOCK_CODING == 0){
 			FourBFiveB Four = new FourBFiveB();
-			str = Four.encode(str);
+			System.out.println(str.length());
+			Block = Four.encode(str);
 		}
-		else if(SaveSettings.SAVE_PHYSICALLINK == 0){
+		if(SaveSettings.SAVE_PHYSICALLINK == 0){
 			NRZ_L nrz_l = new NRZ_L();
-			str = nrz_l.encode(str);
+			str = nrz_l.encode(Block);
 		}
-		else if(SaveSettings.SAVE_PHYSICALLINK == 1){
+		if(SaveSettings.SAVE_PHYSICALLINK == 1){
 			NRZ_I nrz_i = new NRZ_I();
-			str = nrz_i.encode(str);
+			str = nrz_i.encode(Block);
 		}
-		else if(SaveSettings.SAVE_PHYSICALLINK == 2){
+		if(SaveSettings.SAVE_PHYSICALLINK == 2){
 			RZ rz = new RZ();
-			str = rz.encode(str);
+			str = rz.encode(Block);
 		}
-		else if(SaveSettings.SAVE_PHYSICALLINK == 3){
+		if(SaveSettings.SAVE_PHYSICALLINK == 3){
 			Manchester man = new Manchester();
-			str = man.encode(str);
+			str = man.encode(Block);
 		}
-		else if(SaveSettings.SAVE_PHYSICALLINK == 4){
+		if(SaveSettings.SAVE_PHYSICALLINK == 4){
 			Diff_Manchester diff_man = new Diff_Manchester();
-			str = diff_man.encode(str);
+			str = diff_man.encode(Block);
 		}
 		
-		return (tmp + str);
+		return (tmp +str);
 		//return str;
 	}
 	//Call this to get OSI sender

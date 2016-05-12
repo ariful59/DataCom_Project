@@ -45,8 +45,16 @@ public class Receiver {
 	
 	//DataLink Layer
 	private String dh(String str){
+		
+		if(SaveSettings.SAVE_DATALINK_SCHEME == 0){
+			Ham_dis ham = new Ham_dis();
+			str = ham.decode(str);
+			if(str.equals("")){
+				return "$###################$";
+			}
+		}
 		int len = str.length();
-		String ans = str.substring(24, len - 24);
+		String ans = str.substring(32, len - 24);
 		if(SaveSettings.SAVE_DATALINK_SCHEME == 1){  //CRC-32 Selected
 			CRC C = new CRC();
 			ans = C.decode(ans);
@@ -54,13 +62,7 @@ public class Receiver {
 				return "$???????????????????$";
 			}
 		}
-		else if(SaveSettings.SAVE_DATALINK_SCHEME == 0){
-			Ham_dis ham = new Ham_dis();
-			ans = ham.decode(ans);
-			if(ans.equals("")){
-				return "$???????????????????$";
-			}
-		}
+		
 		BinaryConverter cnv = new BinaryConverter();
 		ans = cnv.fromBinary(ans);
 		return nh(ans);
@@ -69,29 +71,29 @@ public class Receiver {
 	//Physical Layer
 	private String phh(String str){
 		String ans = str.substring(32);
-		if(SaveSettings.SAVE_PHYSICALLINK==6){
-			FourBFiveB Four = new FourBFiveB();
-			ans = Four.decode(ans);
-		}
-		else if(SaveSettings.SAVE_PHYSICALLINK == 0){
+		if(SaveSettings.SAVE_PHYSICALLINK == 0){
 			NRZ_L nrz_l = new NRZ_L();
 			ans = nrz_l.decode(ans);
 		}
-		else if(SaveSettings.SAVE_PHYSICALLINK == 1){
+		if(SaveSettings.SAVE_PHYSICALLINK == 1){
 			NRZ_I nrz_i = new NRZ_I();
 			ans = nrz_i.decode(ans);
 		}
-		else if(SaveSettings.SAVE_PHYSICALLINK == 2){
+		if(SaveSettings.SAVE_PHYSICALLINK == 2){
 			RZ rz = new RZ();
 			ans = rz.decode(ans);
 		}
-		else if(SaveSettings.SAVE_PHYSICALLINK == 3){
+		if(SaveSettings.SAVE_PHYSICALLINK == 3){
 			Manchester man = new Manchester();
 			ans = man.decode(ans);
 		}
-		else if(SaveSettings.SAVE_PHYSICALLINK == 4){
+		if(SaveSettings.SAVE_PHYSICALLINK == 4){
 			Diff_Manchester diff_man = new Diff_Manchester();
 			ans = diff_man.decode(ans);
+		}
+		if(SaveSettings.SAVE_BLOCK_CODING == 0){
+			FourBFiveB Four = new FourBFiveB();
+			ans = Four.decode(ans);
 		}
 		return dh(ans);
 		//return dh(str);

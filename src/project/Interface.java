@@ -78,11 +78,14 @@ public class Interface extends JFrame{
 	class SendInterface extends JFrame{
 		private JComboBox dataLinkScheme;
 		private JComboBox dataLinkProtocol;
+		private JComboBox blockCoding;
 		private JComboBox physical;
+		
 		private JLabel textShow;
 		private String strdataLinkScheme[] = {"Hamming Distance" , "CRC"};
 		private String strdataLinkProtocol[] = {"Go back n","Selective Repeat"};
-		private String strphysical[] ={"NRZ-L","NRZ-I","RZ","Manchester","Differential Manchester","MLT-3","4B/5B","8B/10B"};
+		private String strBlockCoding[] = {"4B/5B","8B/10B"};
+		private String strphysical[] ={"NRZ-L","NRZ-I","RZ","Manchester","Differential Manchester"};
 		private JButton Load; 
 		SendInterface(){
 			super("Sender");
@@ -92,6 +95,7 @@ public class Interface extends JFrame{
 			SaveSettings.SAVE_DATALINK_PROTOCOL=1;
 			SaveSettings.SAVE_DATALINK_SCHEME=1;
 			SaveSettings.SAVE_PHYSICALLINK=1;
+			SaveSettings.SAVE_BLOCK_CODING=0;
 			
 			textShow = new JLabel();
 			textShow.setText("This is sender side. Select Datalink and Physical Layer:");
@@ -134,10 +138,28 @@ public class Interface extends JFrame{
 				}
 			});
 			add(dataLinkScheme);
+			
+			
+			textShow = new JLabel();
+			textShow.setText("Select Block Coding Scheme");
+			add(textShow);
+			
+			blockCoding = new JComboBox(strBlockCoding);
+			blockCoding.setMaximumRowCount(1);
+			blockCoding.setSelectedIndex(0); //this is default
+			blockCoding.addActionListener(new ActionListener(){
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					int index = blockCoding.getSelectedIndex();
+					SaveSettings.SAVE_BLOCK_CODING= index;
+				}
+			});
+			add(blockCoding);
 
 
 			textShow = new JLabel();
-			textShow.setText("Select Physical Layer");
+			textShow.setText("Select Line Coding Scheme");
 			textShow.setHorizontalAlignment(SwingConstants.CENTER);;
 			add(textShow);
 			
@@ -186,10 +208,13 @@ public class Interface extends JFrame{
 		private JComboBox dataLinkScheme;
 		private JComboBox dataLinkProtocol;
 		private JComboBox physical;
+		private JComboBox blockCoding;
+		
 		private JLabel textShow;
 		private String strdataLinkScheme[] = {"Hamming Distance" , "CRC"};
 		private String strdataLinkProtocol[] = {"Go back n","Selective Repeat"};
-		private String strphysical[] ={"NRZ-L","NRZ-I","RZ","Manchester","Differential Manchester","MLT-3","4B/5B","8B/10B"};
+		private String strBlockCoding[] = {"4B/5B","8B/10B"};
+		private String strphysical[] ={"NRZ-L","NRZ-I","RZ","Manchester","Differential Manchester"};
 		private JButton Load; 
 		
 		receiverInterface(){
@@ -201,6 +226,7 @@ public class Interface extends JFrame{
 			SaveSettings.SAVE_DATALINK_PROTOCOL=1;
 			SaveSettings.SAVE_DATALINK_SCHEME=1;
 			SaveSettings.SAVE_PHYSICALLINK=1;
+			SaveSettings.SAVE_BLOCK_CODING=0;
 			
 			textShow = new JLabel();
 			textShow.setText("This is receiver side. Select Datalink and Physical Layer:");
@@ -241,10 +267,26 @@ public class Interface extends JFrame{
 				}
 			});
 			add(dataLinkScheme);
+			
+			textShow = new JLabel();
+			textShow.setText("Select Block Coding Scheme");
+			add(textShow);
+			
+			blockCoding = new JComboBox(strBlockCoding);
+			blockCoding.setMaximumRowCount(1);
+			blockCoding.setSelectedIndex(0); //this is default
+			blockCoding.addActionListener(new ActionListener(){
 
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					int index = blockCoding.getSelectedIndex();
+					SaveSettings.SAVE_BLOCK_CODING= index;
+				}
+			});
+			add(blockCoding);
 
 			textShow = new JLabel();
-			textShow.setText("Select Physical Layer");
+			textShow.setText("Select Line Coding Scheme");
 			textShow.setHorizontalAlignment(SwingConstants.CENTER);;
 			add(textShow);
 			

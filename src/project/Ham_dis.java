@@ -45,10 +45,11 @@ public class Ham_dis {
 
     public String decode(String str) {
         ret = "";
+        //boolean prevErr = false;
         for (int i = 0; i < str.length(); i += 7) {
             tmp = "";
             int got = -1;
-
+            
             for (int j = i; j < i + 7; j++) {
                 tmp += str.charAt(j);
             }
@@ -75,6 +76,7 @@ public class Ham_dis {
 
 
                 ret += tmp;
+                //prevErr = true;
             } else {
                 ret += seq[got];
             }

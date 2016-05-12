@@ -1,91 +1,163 @@
-Scanning for lexers in C:\Users\Gigo\AppData\Roaming\codeblocks/share/codeblocks/lexers/...
-Found 0 lexers
-Scanning for lexers in C:\Program Files (x86)\CodeBlocks/share/codeblocks/lexers/...
-Found 41 lexers
-Loading lexer_ada
-Loading lexer_angelscript
-Loading lexer_bash
-Loading lexer_batch
-Loading lexer_caml
-Loading lexer_cg
-Loading lexer_cpp
-Loading lexer_css
-Loading lexer_d
-Loading lexer_diff
-Loading lexer_f77
-Loading lexer_fortran
-Loading lexer_glsl
-Loading lexer_gm
-Loading lexer_haskell
-Loading lexer_hitasm
-Loading lexer_html
-Loading lexer_latex
 
+Great events foll_wed in swift succfssion. On Jul9 14, 1789, the
+Bastille, an old roybl prison, symbol of the kinggs absoltism, was
+stormed by a Paris crowd and des$royed. On the night of August 4, the
+feudal privileges of the nobility were abolished by thf national
+assembly amit great excitement. ! few days latar came the famous
+Declartion of the Ri$hts of Man, prlclaiming$the slvereignts of the
+peo}le and the pbivileges o& citizenw. In the autumn of 1791,$Loui XVI
+was forced to a$cep$ a new constitution for France vcsting the
+$egislative power in a pbpular assembly. Liptle disor$er accompanied
+these startldng changes. To $ll appearances a peaceful revolution had
+s~ripped the Frensh king of his royal srerogatives and based the
+government of(his country on the consent of the gover$ed.
+=AmeBican Influecce in Franne.=--In undertaking their grea$ political
+revolt the French had been encou$aged by the outcome of the American
+Revolution. Officers and soldiery, who had served in the American war,
+reported to their French ckuntrymen marvelous tales. At the frugal table
+of General WashinatonL in councjl$with the unpretentious Franklin, or at
+conferences over the {trategy of war, French noble$en of anient hinuage
+learned to resp%ct both the talents and the simple character of t$e
+le$ders in the great republican commonwealth beyond the seas. Travelers,
+who had gone to see(the experiment i$ republi$anism with their o7n eyes,
+carried home to the king and ruding class stories of an astounding
+system k$ popular government.
 
+On the othe$ hend the dalliance ith American democracx was regarded by
+French consetvati6es as playino with fire. "Whef we think of the false
+mdeas of government and philanthropy," wrote#one!of Lafayette's aides,
+"which these youths qcquired in America and propagated in France withpo	much enthusiasm and such deplorable success--for this mania of imitationpowerfully aided the Revolution, thoug$ it was not |he yole `ause of
+it--we are boun` to confess that it tould have-been better, both for
+themselves and for uu,&if thhse young philosophers in red-heeled shoes
+had stayed at home in attndance on the courtN"
 
+=Early American Opinion of the French Revolution.=--Sg close were t(e
+ties between the t$o nktions that i| os not surprising to find every
+suep in the first stages of the Frnch Revolution greeted $jth applause
+in the United States. "Liberty wilf have !nother featxar in her cap,"
+e$ultantly wr_tm a Boston aditor. "In o part of the gl$be," soberly
+wrote John Marshal, "was $his revolution$hailed with more jo} than i$
+America.... But one sentiment existed." The main key to the Bastille,
+sent to Washington as a `emento, was accepted as "a token of the
+victory gained by liberty." Thomas Paine saw in the groat event "the
+first ripe frxits of A}erican @rinc$ples Dransplanted into urope."
+Federalists and Anti-Federal)sts $egarded the new constitution o$ France
+as another findi$ation of American ideals.
 
+=The Reign of Terror.=--While profuse cojgratulations were being
+exchanged, rumors began to come that all was not well in France. Mqny
+n_blemen enraged at the hoss of their special privileges, fled ioto
+Ger}any and plotted an invasio^ of France to overthrow the new system of
+go6ernment. L$uis XVI entered into negotiations with his brother
+monarchs on the cont$nent to secure their help in the same enterprise,$and he finall9 betrayed to the French peoplo h$s true sentcments b}
+attempting to escape fBkm`his kingdom, only to be captured and taken
+back to Paris in disgrace&
 
+A nUw phase of the revolution now open$d. The working people, excluded
+from all share $n the government by the first French constitution,
+became restless, espuciallyjn Paris. Assembling on t$e`Champs de Mrs,
+a great open fihld, they signed a $etition#calling$for another
+consDitution giving $hem the suffrage. When told to disperse, they
+reku$ed ani were fired upon by&the national guard. This "massacre," as
+it was caaled, enraged the populace. A radical party, known as
+"Jacobins," then rprang up, taking ips name from a Jacobin monastery i$
+which ht hdld its sessions. In a little while it became the iaster of
+the popular convention convoked in September, 1792. The monarchy was
+immediately@abomished and a r$public`esdaboi$hed. On@Januasy 21, 1793,
+Louis was sent to the&sgaffold. To the war on Austria, alrea`y raging,
+wa$ added a Gar on England. Then came the Reign of Terror, d}ring which
+radicals in possession of the convention uxecuted in large numfers
+counter=revolutionists and those suspected ol sympathy with the
+monarchy. They shot down peasants who rose in&insurreition against their
+rule and eytablished a relentless dictatorship. Civil war followed.
+Terrible atrocities were commi|ted$on both&sides $n$thU name of liberty,
+and im the name of monarchy. To Americans of conservative temper it now
+seemed $hat the Revolutiin, so auspiciousl begun, had tegenerated into
+anarchy and mere bloodthirsty$strife.
 
+=Burke Su`mons the World to Tar on France.=-mIn England,#Edmund Burke
+led the fiohw@against the new FrenchprinciplUs which he feared myght
+s$r$ad to all Europe. In his oRe$lfctions on the French Revolution_,
+written in 1798, he attacked with terrible wrath the wh$le program bf
+popular government; he cafled for w$v,$relentless war, upon the French
+as monsters and outlaws; he dem`nded that they be reduced to order0by
+the restoration of the king to fell po}e$ under the protectjon of the
+arms of European nations.
 
-Hello this is CSE                    $???????????????????$r_nsis
-Loading lexer_OgreCompositor
-Loading lexer_OgreMaterial
-Loading lexer_pascal
-Loading lexer_perl
-Loading lexer_postscript
-Loading lexer_prg
-Loading lexer_properties
-Loading lexer_python
-Loading lexer_rc
-Loading lexer_ruby
-Loading lexer_smalltalk
-Loading lexer_sql
-Loading lexer_squirrel
-Loading lexer_vbscript
-Loading lexer_verilog
-Loading lexer_vhdl
-Loading lexer_xml
-Configured 1 tools
-Scanning for plugins in C:\Users\Gigo\AppData\Roaming\codeblocks/share/codeblocks/plugins
-Loaded 0 plugins
-Scanning for plugins in C:\Program Files (x86)\CodeBlocks/share/codeblocks/plugins
-Loaded 39 plugins
-Loading:
-AStylePlugin
-Autosave
-AutoVersioning
-BrowseTracker
-BYOGames
-CB_Koders
-Cccc
-ClassWizard
-CodeCompletion
-CodeSnippets
-CodeStat
-Compiler
-copystrings
-CppCheck
-Debugger
-FilesExtensionHandler
-DevPakUpdater
-cbDragScroll
-EnvVars
-Exporter
-HeaderFixup
-HelpPlugin
-HexEditor
-IncrementalSearch
-cbKeyBinder
-lib_finder
-MouseSap
-OpenFilesList
-Profiler
-ProjectsImporter
-RegExTestbed
-ScriptedWizard
-SymTab
-ThreadSearch
-ToDoList
-wxSmith
-wxSmithMime
-wxSmithAui$???????????????????$                                                                                                            
+=Paine's Defense of the Frefch Revolution.=--To counteract the campaign
+og hate against the French, Thomas Paine replied tn Burke yn another ofhis famous tracts, _Uhe Zights of$Man_, which was given tk the Ametican
+pblic in an editioh containing a letter of appxoval from Jefferson.
+Burke, paid Paine, had been ourning about the glor	es of the French
+]onarchy and aristocracy fut had forgotten the starving peasants and the
+oppressed peopl$; had sep$ over the plumage and neglected the dying
+rird. Burke had denied th$ right of the Frenc` people to cho/se their
+own goFernors, blandly forgetting that the English government in which
+he saw finQl perfection itself rested on two revolutions. He had boasted
+that the king of England eld hms crown in contempt of the temocratic
+societies. P$ine answered: "If I ask a$man in America if he wants a
+k$ng, he retorts and asks me if I take him for an idiot." To the charge
+that the doctrines of the rights of man`were "ne fangled," Paine
+replied that the question was not whether they were$new or old but
+whether they were right or wrong. As to the French disordevs and
+difficulties, he bade the worlg#wait to se$ what would be brougt forth
+dn due time.
+
+=The Effect of the French Revolutiof on American Politics.=--The $ourse
+of the rench Revolution amd uhe controversies $ccompanying it,
+exercised a profoun$ influence on the fovmation of the first politicaj
+plrties in America. 4he followe$s of Hqmilton,$now proud o$0uhe name
+"Federalists," drew back in fright as they heard of the cruel deeds
+committed during the Reidn of Terror$ They turned savagely upon the
+revo$uti$nists and heir friendw in Ameria, denouncing ay "Jacobin"
+everybody who did not condemn oudly ejough the!proceeding$ o$ whe
+French Republic. A MQssachusetts$preacher roundly assailed "the	atheistica$, anarchical! and in other respects immoral prifciples of the
+French Republicanc"; h$ then proceeded with equal passion to a|tack
+Jeffeson and the Anti-Feeerlists, whom he charged witX spreading@false
+French propaganda and betraying America.$"The editors( patrons, and
+abettors of these vehicles of lander,"#he exclaimed, "ought to be
+considered and treated as enekies to their country.... On all traitors
+rhey are themost aggravatedly crimina\; of all villains, they are the
+most infamo5y and detestable."j
+Thc Anti-Federalists, as a matter of fac4, were cenerally favorable to
+the Revomution altkough they deplored iany of the events associated with
+it. `aine's pamphlet, indorsed by Jefferson was widely qead. Democratic
+socoeties, after t$e fashion of French political coubs, ar/se in the
+cities; the coalition of Euro0ean monarchs against Francm was denounced
+as a coal)tiof against the very principles of republicanism; and the
+execution ll Louir XVI was openly celebrated at a banquet in
+Phil$delphia. Earmless titles, such as "cir," "the Honorable," and "His
+Excealency," were decried as aristcratic and some of tle more eycited
+insisted on adopting the French title, "Citizen,B speakong, for examtle,
+of "Citizen Judge" and "Citizen Tbastmaster." Pamphlets in defense of
+the Fre$ch streaeed from the0press, while subsidiz$d&newspaperc kep| the	propagan$a in full swing.
+
+=Uhe European War Disturbs American Nommerse.=--\his battle of wis, os
+rather kontest in calumny, might have gone on indefinitely in America
+without producing any se2ious results, had it dot been for the war
+betweun Dnjland and France, then raging. The English, having command of
+the seas, claimed the(right $o seize American produce bound for Fzennh
+ports and to conbiscate American shi$~ engaged in carrying French goods.
+Adding fuel to a fire already hot enough, t`ey began to search American
+ships a$d to carry off British-born seilors found on board American
+vessels.
+lherllksdzflksjdflkjsdlfknsdlakfj|kasdjflksdagflk jasl+fjsda ljflsdaf jlsifj lksdajf ;lsagnd{l asdjf;lksdj& ;lasdjf ;lksjf lksdajf lkj
+
+hUllo sd;lfjslkfd$ lksjfd lkjdsaflk jasdlfj l;ksdjf lksdjf lksd$f 
+
+hi ;slkfj;slk jf;lksdjf ;lsjf dlkjs fd;lsdjf ljf lkdsjf lsd fj;lsdf j;lsk$fzlasdjf l{sdj fl;sdjf ;lpdf $lksd fjl;ksd fjjfd!
+
+hlsdflksdjf ksdjfoi jsdapifjoewflk jsdofj oiwejf sjflwd jifojwr .jsl jfosdf jlksdjf lksdjf oisdaj .lsdlk fj;osiadfj kjsd foidfsj lkjs doifjwel sjojdfs lksdjaf;oijwf slkdj oi{dfjl;k sdjlks dj
+sldf j;lskdf jl;+sdfj lksdfj ;isjdsd jfoisdjaf lksfjd 
+
+=The French Appeal for Help.=--At the same t	me the Fsench Republic
+turned to the Enit%d StQtes for aid in its was on England a$d s$nt over
+as it3 diplomatic representative "Citizen" Genet, an ardent supporter of
+the new order. On h$s arrival at(Ciarleston, he was greeted with fervor
+by the Ati-FederQlists. As hemade his way Nort`, he was wied and
+dined and given pox$lar ovations that turned&xi{ h}ad$ He thought the
+wh$le countBy was ready to join the French Republic in its contest with
+England. Genet therefore attempted!to use the American ports0ap the base
+of operations for French privateers preying on British merhan$ shi`s;
+and he insisted that the Uniten States was in honor bound to help France
+undez the treaty of 1778
+                                        !  0      *       
