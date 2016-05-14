@@ -168,3 +168,104 @@ England. Genet therefore attempted to use the American ports as the base
 of operations for French privateers preying on British merchant ships;
 and he insisted that the United States was in honor bound to help France
 under the treaty of 1778
+
+
+Scanning for lexers in C:\Users\Gigo\AppData\Roaming\codeblocks/share/codeblocks/lexers/...
+Found 0 lexers
+Scanning for lexers in C:\Program Files (x86)\CodeBlocks/share/codeblocks/lexers/...
+Found 41 lexers
+Loading lexer_ada
+Loading lexer_angelscript
+Loading lexer_bash
+Loading lexer_batch
+Loading lexer_caml
+Loading lexer_cg
+Loading lexer_cpp
+Loading lexer_css
+Loading lexer_d
+Loading lexer_diff
+Loading lexer_f77
+Loading lexer_fortran
+Loading lexer_glsl
+Loading lexer_gm
+Loading lexer_haskell
+Loading lexer_hitasm
+Loading lexer_html
+Loading lexer_latex
+Loading lexer_lisp
+Loading lexer_lua
+Loading lexer_make
+Loading lexer_masm
+Loading lexer_matlab
+Loading lexer_nsis
+Loading lexer_OgreCompositor
+Loading lexer_OgreMaterial
+Loading lexer_pascal
+Loading lexer_perl
+Loading lexer_postscript
+Loading lexer_prg
+Loading lexer_properties
+Loading lexer_python
+Loading lexer_rc
+Loading lexer_ruby
+Loading lexer_smalltalk
+Loading lexer_sql
+Loading lexer_squirrel
+Loading lexer_vbscript
+Loading lexer_verilog
+
+
+
+hello
+
+
+
+Loading lexer_vhdl
+Loading lexer_xml
+Configured 1 tools
+Scanning for plugins in C:\Users\Gigo\AppData\Roaming\codeblocks/share/codeblocks/plugins
+Loaded 0 plugins
+Scanning for plugins in C:\Program Files (x86)\CodeBlocks/share/codeblocks/plugins
+Loaded 39 plugins
+Loading:
+AStylePlugin
+Autosave
+AutoVersioning
+BrowseTracker
+BYOGames
+CB_Koders
+Cccc
+ClassWizard
+CodeCompletion
+CodeSnippets
+CodeStat
+Compiler
+copystrings
+CppCheck
+Debugger
+FilesExtensionHandler
+DevPakUpdater
+cbDragScroll
+EnvVars
+Exporter
+HeaderFixup
+HelpPlugin
+HexEditor
+IncrementalSearch
+cbKeyBinder
+lib_finder
+MouseSap
+OpenFilesList
+Profiler
+ProjectsImporter
+RegExTestbed
+ScriptedWizard
+SymTab
+ThreadSearch
+ToDoList
+wxSmith
+wxSmithMime
+wxSmithAui
+wxSmithContribItems
+WindowsXPLookNFeel
+                                                                                                             

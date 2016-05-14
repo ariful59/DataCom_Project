@@ -10,16 +10,18 @@ public class ReceiverMain extends Frame {
 	public void doJob()throws IOException{
 		FileInputClass fin = new FileInputClass();
 		FileOutputClass fout = new FileOutputClass();
-		String fileAddress ="";
+		String fileAddress ="Files/Output_Files/outCRC.txt";
 		
-		JFileChooser fileChooser = new JFileChooser();
+		/*JFileChooser fileChooser = new JFileChooser();
 		fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
 		int result = fileChooser.showOpenDialog(this);
 		if (result == JFileChooser.APPROVE_OPTION) {
 		    File selectedFile = fileChooser.getSelectedFile();
 		    System.out.println("Selected file: " + selectedFile.getAbsolutePath());
 		    fileAddress = selectedFile.getAbsolutePath();
-		}
+		}*/
+		
+		
 		
 		fin.setFileName("Files/Temp_File/temp.txt");
 		fout.setFileName(fileAddress);
@@ -27,14 +29,21 @@ public class ReceiverMain extends Frame {
 		Receiver rcvr = new Receiver();
 		int count = 0;
 		String str="";
-		ReceiveSocket receiving = new ReceiveSocket();
-		receiving.Start();
+		GBNReceive receiving = new GBNReceive();
+		
+		//receiving.goRun();
 		while(!receiving.isEOF()){
 			str = "";
 			//str = fin.takeInput(2390);
 			while(!receiving.isEOF()){
 				str = receiving.getString();
 				if(str.length()>0)break;
+				try {
+					Thread.sleep(50);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 			}
 			count = str.length();
 			System.out.println("receiver Received: " +count);
@@ -52,6 +61,11 @@ public class ReceiverMain extends Frame {
 		}
 		System.out.println("receiver finished");
 		fout.closeFile();
-		receiving.Close();
+		try {
+			receiving.CLOSE();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 }
