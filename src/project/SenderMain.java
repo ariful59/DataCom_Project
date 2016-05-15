@@ -58,10 +58,10 @@ public class SenderMain extends Frame{
 		System.out.println(SaveSettings.SAVE_INPUT_NUMBER);
 		otp.closeFile();
 		this.dispose();
-		/*String conf = JOptionPane.showInputDialog("(sender)Want to Continue (Y/N)");
+		String conf = JOptionPane.showInputDialog("(sender)Want to Continue (Y/N)");
 		if(conf.startsWith("Y") || conf.startsWith("y")){
 			Interface face = new Interface();
 			face.showInterface();
-		}*/
+		}
 	}
 }
