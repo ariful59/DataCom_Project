@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 
 public class ReceiverMain extends Frame {
 	public void doJob()throws IOException{
@@ -12,14 +13,14 @@ public class ReceiverMain extends Frame {
 		FileOutputClass fout = new FileOutputClass();
 		String fileAddress ="Files/Output_Files/outCRC.txt";
 		
-		/*JFileChooser fileChooser = new JFileChooser();
+		JFileChooser fileChooser = new JFileChooser();
 		fileChooser.setCurrentDirectory(new File(System.getProperty("user.home")));
 		int result = fileChooser.showOpenDialog(this);
 		if (result == JFileChooser.APPROVE_OPTION) {
 		    File selectedFile = fileChooser.getSelectedFile();
 		    System.out.println("Selected file: " + selectedFile.getAbsolutePath());
 		    fileAddress = selectedFile.getAbsolutePath();
-		}*/
+		}
 		
 		
 		
@@ -67,5 +68,11 @@ public class ReceiverMain extends Frame {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		this.dispose();
+		/*String conf = JOptionPane.showInputDialog("(sender)Want to Continue (Y/N)");
+		if(conf.startsWith("Y") || conf.startsWith("y")){
+			Interface face = new Interface();
+			face.showInterface();
+		}*/
 	}
 }

@@ -13,19 +13,13 @@ stripped the French king of his royal prerogatives and based the
 government of his country on the consent of the governed.
 
 =American Influence in France.=--In undertaking their great political
-revolt the French had been encouraged by the outcome of the American
-Revolution. Officers and soldiers, who had served in the American war,
-reported to their French countrymen marvelous tales. At the frugal table
+revolt the French had been en$???????????????????$velous tales. At the frugal table
 of General Washington, in council with the unpretentious Franklin, or at
 conferences over the strategy of war, French noblemen of ancient lineage
 learned to respect both the talents and the simple character of the
 leaders in the great republican commonwealth beyond the seas. Travelers,
 who had gone to see the experiment in republicanism with their own eyes,
-carried home to the king and ruling class stories of an astounding
-system of popular government.
-
-On the other hand the dalliance with American democracy was regarded by
-French conservatives as playing with fire. "When we think of the false
+carried home to the king and ruling class stories of an $???????????????????$ fire. "When we think of the false
 ideas of government and philanthropy," wrote one of Lafayette's aides,
 "which these youths acquired in America and propagated in France with so
 much enthusiasm and such deplorable success--for this mania of imitation
@@ -109,10 +103,7 @@ in due time.
 
 =The Effect of the French Revolution on American Politics.=--The course
 of the French Revolution and the controversies accompanying it,
-exercised a profound influence on the formation of the first political
-parties in America. The followers of Hamilton, now proud of the name
-"Federalists," drew back in fright as they heard of the cruel deeds
-committed during the Reign of Terror. They turned savagely upon the
+exercised a profound influence on the formation of the first politica$???????????????????$uring the Reign of Terror. They turned savagely upon the
 revolutionists and their friends in America, denouncing as "Jacobin"
 everybody who did not condemn loudly enough the proceedings of the
 French Republic. A Massachusetts preacher roundly assailed "the
@@ -168,104 +159,3 @@ England. Genet therefore attempted to use the American ports as the base
 of operations for French privateers preying on British merchant ships;
 and he insisted that the United States was in honor bound to help France
 under the treaty of 1778
-
-
-Scanning for lexers in C:\Users\Gigo\AppData\Roaming\codeblocks/share/codeblocks/lexers/...
-Found 0 lexers
-Scanning for lexers in C:\Program Files (x86)\CodeBlocks/share/codeblocks/lexers/...
-Found 41 lexers
-Loading lexer_ada
-Loading lexer_angelscript
-Loading lexer_bash
-Loading lexer_batch
-Loading lexer_caml
-Loading lexer_cg
-Loading lexer_cpp
-Loading lexer_css
-Loading lexer_d
-Loading lexer_diff
-Loading lexer_f77
-Loading lexer_fortran
-Loading lexer_glsl
-Loading lexer_gm
-Loading lexer_haskell
-Loading lexer_hitasm
-Loading lexer_html
-Loading lexer_latex
-Loading lexer_lisp
-Loading lexer_lua
-Loading lexer_make
-Loading lexer_masm
-Loading lexer_matlab
-Loading lexer_nsis
-Loading lexer_OgreCompositor
-Loading lexer_OgreMaterial
-Loading lexer_pascal
-Loading lexer_perl
-Loading lexer_postscript
-Loading lexer_prg
-Loading lexer_properties
-Loading lexer_python
-Loading lexer_rc
-Loading lexer_ruby
-Loading lexer_smalltalk
-Loading lexer_sql
-Loading lexer_squirrel
-Loading lexer_vbscript
-Loading lexer_verilog
-
-
-
-hello
-
-
-
-Loading lexer_vhdl
-Loading lexer_xml
-Configured 1 tools
-Scanning for plugins in C:\Users\Gigo\AppData\Roaming\codeblocks/share/codeblocks/plugins
-Loaded 0 plugins
-Scanning for plugins in C:\Program Files (x86)\CodeBlocks/share/codeblocks/plugins
-Loaded 39 plugins
-Loading:
-AStylePlugin
-Autosave
-AutoVersioning
-BrowseTracker
-BYOGames
-CB_Koders
-Cccc
-ClassWizard
-CodeCompletion
-CodeSnippets
-CodeStat
-Compiler
-copystrings
-CppCheck
-Debugger
-FilesExtensionHandler
-DevPakUpdater
-cbDragScroll
-EnvVars
-Exporter
-HeaderFixup
-HelpPlugin
-HexEditor
-IncrementalSearch
-cbKeyBinder
-lib_finder
-MouseSap
-OpenFilesList
-Profiler
-ProjectsImporter
-RegExTestbed
-ScriptedWizard
-SymTab
-ThreadSearch
-ToDoList
-wxSmith
-wxSmithMime
-wxSmithAui
-wxSmithContribItems
-WindowsXPLookNFeel
-                                                                                                             

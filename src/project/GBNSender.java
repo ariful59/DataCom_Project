@@ -8,6 +8,8 @@ import java.net.UnknownHostException;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import javax.swing.JOptionPane;
+
 class Framing{
 	public long tim;
 	public int f_number;
@@ -31,7 +33,12 @@ public class GBNSender {
 	FrameTime timing;
 	boolean EOF;
 	GBNSender() throws UnknownHostException, IOException{
-		socket = new Socket("127.0.0.1",8080);
+		//String SADD = JOptionPane.showInputDialog("Enter IP Address(keep null for local)\n");
+		//if(SADD.length() == 0 || SADD == null)SADD = "127.0.0.1";
+		//SADD = "192.168.43.46";
+		System.out.println("HERE");
+		socket = new Socket(SaveSettings.IPADDRESS,8080);
+		System.out.println("connect");
 		dOut = new DataOutputStream(socket.getOutputStream());
 		dIn = new DataInputStream(socket.getInputStream());
 		Q = new LinkedList<Framing>();
@@ -104,9 +111,9 @@ public class GBNSender {
 			synchronized(Q){
 				if(Q.size() < 4)flag=true;
 			}
-			//Thread.sleep(100);
+			Thread.sleep(50);
 			System.out.println("..");
-			Thread.yield();
+			//Thread.yield();
 		}
 		System.out.println("frame_number : "+frame_number);
 		dOut.writeInt(frame_number);

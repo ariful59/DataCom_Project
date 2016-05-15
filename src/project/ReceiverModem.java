@@ -1,4 +1,4 @@
-package project;
+/*package project;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -91,4 +91,4 @@ public class ReceiverModem {
             if(Q.isEmpty())return "";
             return Q.remove();
         }
-}
+}*/
