@@ -47,6 +47,8 @@ public class GBNReceive {
 				int frame_number =0;
 				try{
 					frame_number = dIn.readInt();
+					System.out.println("Receiver Frame Number: "+frame_number);
+					
 				}catch(EOFException e){
 					continue;
 				} catch (IOException e) {
@@ -61,12 +63,12 @@ public class GBNReceive {
 						e.printStackTrace();
 					}
 					EOF = true;
-					try {
+					/*try {
 						Thread.sleep(1000);
 					} catch (InterruptedException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();
-					}
+					}*/
 					return;
 				}
 				else{
@@ -77,7 +79,7 @@ public class GBNReceive {
 					if(frame_number == R){
 						Q.add(str);
 						R++;
-						R%=5;
+						R%=8;
 					}
 					if(rand.nextInt(100) >= 5)
 						dOut.writeInt(R);

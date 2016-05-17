@@ -9,6 +9,12 @@ import java.awt.event.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.net.UnknownHostException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.comm.NoSuchPortException;
+import javax.comm.PortInUseException;
+import javax.comm.UnsupportedCommOperationException;
 
 import javax.swing.*;
 
@@ -83,18 +89,18 @@ public class Interface extends JFrame{
 		
 		private JLabel textShow;
 		private String strdataLinkScheme[] = {"Hamming Distance" , "CRC"};
-		private String strdataLinkProtocol[] = {"Go back n","Selective Repeat"};
-		private String strBlockCoding[] = {"4B/5B","8B/10B"};
+		private String strdataLinkProtocol[] = {"Go back n"};
+		private String strBlockCoding[] = {"4B/5B"};
 		private String strphysical[] ={"NRZ-L","NRZ-I","RZ","Manchester","Differential Manchester"};
-		private JButton Load; 
+		private JButton WireLess , Wired; 
 		SendInterface(){
 			super("Sender");
 			setLayout(new FlowLayout(FlowLayout.CENTER,10,30));
 			
 			//Default SaveSettings
-			SaveSettings.SAVE_DATALINK_PROTOCOL=1;
-			SaveSettings.SAVE_DATALINK_SCHEME=1;
-			SaveSettings.SAVE_PHYSICALLINK=1;
+			SaveSettings.SAVE_DATALINK_PROTOCOL=0;
+			SaveSettings.SAVE_DATALINK_SCHEME=0;
+			SaveSettings.SAVE_PHYSICALLINK=0;
 			SaveSettings.SAVE_BLOCK_CODING=0;
 			
 			textShow = new JLabel();
@@ -107,8 +113,8 @@ public class Interface extends JFrame{
 			add(textShow);
 			
 			dataLinkProtocol = new JComboBox(strdataLinkProtocol);
-			dataLinkProtocol.setMaximumRowCount(2);
-			dataLinkProtocol.setSelectedIndex(1); //default selection
+			dataLinkProtocol.setMaximumRowCount(1);
+			dataLinkProtocol.setSelectedIndex(0); //default selection
 			dataLinkProtocol.addActionListener(new ActionListener(){
 
 				@Override
@@ -128,7 +134,7 @@ public class Interface extends JFrame{
 			
 			dataLinkScheme = new JComboBox(strdataLinkScheme);
 			dataLinkScheme.setMaximumRowCount(2);
-			dataLinkScheme.setSelectedIndex(1); //this is default
+			dataLinkScheme.setSelectedIndex(0); //this is default
 			dataLinkScheme.addActionListener(new ActionListener(){
 
 				@Override
@@ -165,7 +171,7 @@ public class Interface extends JFrame{
 			
 			physical = new JComboBox(strphysical);
 			physical.setMaximumRowCount(5);
-			physical.setSelectedIndex(1); //default selection
+			physical.setSelectedIndex(0); //default selection
 			
 			physical.addActionListener(new ActionListener(){
 
@@ -178,8 +184,8 @@ public class Interface extends JFrame{
 			});
 			add(new JScrollPane(physical));
 			
-			Load = new JButton("LOAD & EXIT");
-			Load.addActionListener(new ActionListener(){
+			WireLess = new JButton("LAN CONNECTION");
+			WireLess.addActionListener(new ActionListener(){
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
@@ -199,7 +205,41 @@ public class Interface extends JFrame{
 				}
 				
 			});
-			add(Load);
+			add(WireLess);
+			
+			Wired = new JButton("NULL-MODEM CONNECTION");
+			Wired.addActionListener(new ActionListener(){
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO Auto-generated method stub
+					dispose();
+                                        SenderMainNull send = new SenderMainNull();
+                                        try{
+                        try
+                        {
+                            send.doJob();
+                        } catch (UnknownHostException ex)
+                        {
+                            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (UnsupportedCommOperationException ex)
+                        {
+                            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (PortInUseException ex)
+                        {
+                            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+                        } catch (NoSuchPortException ex)
+                        {
+                            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                                        }catch(IOException excep){
+                                            System.out.println(excep);
+                                        }
+
+				}
+				
+			});
+			add(Wired);
 		}
 	}
 	
@@ -212,10 +252,10 @@ public class Interface extends JFrame{
 		
 		private JLabel textShow;
 		private String strdataLinkScheme[] = {"Hamming Distance" , "CRC"};
-		private String strdataLinkProtocol[] = {"Go back n","Selective Repeat"};
-		private String strBlockCoding[] = {"4B/5B","8B/10B"};
+		private String strdataLinkProtocol[] = {"Go back n"};
+		private String strBlockCoding[] = {"4B/5B"};
 		private String strphysical[] ={"NRZ-L","NRZ-I","RZ","Manchester","Differential Manchester"};
-		private JButton Load; 
+		private JButton WireLess,Wired;
 		
 		receiverInterface(){
 			
@@ -223,9 +263,9 @@ public class Interface extends JFrame{
 			setLayout(new FlowLayout(FlowLayout.CENTER,10,30));
 			
 			//Default SaveSettings
-			SaveSettings.SAVE_DATALINK_PROTOCOL=1;
-			SaveSettings.SAVE_DATALINK_SCHEME=1;
-			SaveSettings.SAVE_PHYSICALLINK=1;
+			SaveSettings.SAVE_DATALINK_PROTOCOL=0;
+			SaveSettings.SAVE_DATALINK_SCHEME=0;
+			SaveSettings.SAVE_PHYSICALLINK=0;
 			SaveSettings.SAVE_BLOCK_CODING=0;
 			
 			textShow = new JLabel();
@@ -238,8 +278,8 @@ public class Interface extends JFrame{
 			add(textShow);
 			
 			dataLinkProtocol = new JComboBox(strdataLinkProtocol);
-			dataLinkProtocol.setMaximumRowCount(2);
-			dataLinkProtocol.setSelectedIndex(1); //default selection
+			dataLinkProtocol.setMaximumRowCount(1);
+			dataLinkProtocol.setSelectedIndex(0); //default selection
 			dataLinkProtocol.addActionListener(new ActionListener(){
 
 				@Override
@@ -257,7 +297,7 @@ public class Interface extends JFrame{
 			
 			dataLinkScheme = new JComboBox(strdataLinkScheme);
 			dataLinkScheme.setMaximumRowCount(2);
-			dataLinkScheme.setSelectedIndex(1); //this is default
+			dataLinkScheme.setSelectedIndex(0); //this is default
 			dataLinkScheme.addActionListener(new ActionListener(){
 
 				@Override
@@ -273,7 +313,7 @@ public class Interface extends JFrame{
 			add(textShow);
 			
 			blockCoding = new JComboBox(strBlockCoding);
-			blockCoding.setMaximumRowCount(1);
+			blockCoding.setMaximumRowCount(0);
 			blockCoding.setSelectedIndex(0); //this is default
 			blockCoding.addActionListener(new ActionListener(){
 
@@ -292,7 +332,7 @@ public class Interface extends JFrame{
 			
 			physical = new JComboBox(strphysical);
 			physical.setMaximumRowCount(5);
-			physical.setSelectedIndex(1); //default selection
+			physical.setSelectedIndex(0); //default selection
 			
 			physical.addActionListener(new ActionListener(){
 
@@ -305,8 +345,8 @@ public class Interface extends JFrame{
 			});
 			add(new JScrollPane(physical));
 			
-			Load = new JButton("LOAD & EXIT");
-			Load.addActionListener(new ActionListener(){
+			WireLess = new JButton("LAN CONNECTION");
+			WireLess.addActionListener(new ActionListener(){
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
@@ -326,7 +366,36 @@ public class Interface extends JFrame{
 				}
 				
 			});
-			add(Load);
+			add(WireLess);
+			
+			Wired = new JButton("NULL-MODEM CONNECTION");
+			Wired.addActionListener(new ActionListener(){
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					// TODO Auto-generated method stub
+					ReceiverMainNull receive = new ReceiverMainNull();
+                                        try
+                                        {
+                                            receive.doJob();
+                                        } catch (IOException ex)
+                                        {
+                                            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+                                        } catch (UnsupportedCommOperationException ex)
+                                        {
+                                            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+                                        } catch (PortInUseException ex)
+                                        {
+                                            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+                                        } catch (NoSuchPortException ex)
+                                        {
+                                            Logger.getLogger(Interface.class.getName()).log(Level.SEVERE, null, ex);
+                                        }
+
+				}
+				
+			});
+			add(Wired);
 		}
 	}
 	

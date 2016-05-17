@@ -17,6 +17,7 @@ public class SaveSettings {
 	SaveSettings(){
 		
 	}
+	public static boolean TAKEIP = false;
 	public static String IPADDRESS;
 	public static Integer SAVE_INPUT_NUMBER;
 	public static Integer SAVE_MODE; //1 for Sender. 2 for Receiver

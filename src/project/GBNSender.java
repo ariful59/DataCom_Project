@@ -33,10 +33,15 @@ public class GBNSender {
 	FrameTime timing;
 	boolean EOF;
 	GBNSender() throws UnknownHostException, IOException{
-		//String SADD = JOptionPane.showInputDialog("Enter IP Address(keep null for local)\n");
-		//if(SADD.length() == 0 || SADD == null)SADD = "127.0.0.1";
-		//SADD = "192.168.43.46";
-		System.out.println("HERE");
+		if(!SaveSettings.TAKEIP){
+			JOptionPane pane = new JOptionPane();
+			SaveSettings.IPADDRESS=pane.showInputDialog("Enter IP address.(keep null for local host)");
+			if(SaveSettings.IPADDRESS.equals("")){
+				SaveSettings.IPADDRESS = "127.0.0.1";
+			}
+			SaveSettings.TAKEIP = true;
+		}
+		
 		socket = new Socket(SaveSettings.IPADDRESS,8080);
 		System.out.println("connect");
 		dOut = new DataOutputStream(socket.getOutputStream());
@@ -73,12 +78,17 @@ public class GBNSender {
 					continue;
 				}
 				synchronized(Q){
-					while(!Q.isEmpty()){
-						Framing f = Q.remove();
-						if(f.f_number>ack_received){
-							Q.add(f);
-							break;
-						}
+					int sz = Q.size();
+					int loc = 0,take = -1;
+					for(int i=0;i<sz;i++){
+						Framing copy = Q.remove();
+						if(take == -1 && copy.f_number==ack_received)take = loc;
+						loc++;
+						Q.add(copy);
+					}
+					if(take==-1)Q.clear();
+					else{
+						for(int i=0;i<=take;i++)Q.remove();
 					}
 				}
 				try {
@@ -94,12 +104,11 @@ public class GBNSender {
 	public void send(String str) throws IOException, InterruptedException{
 		if(str.equals("*"))EOF = true;
 		if(EOF){
-			
 			while(!Q.isEmpty()){
 				//System.out.println("EOF BUT NOT EMPTY");
 				Thread.yield();
 			}
-			dOut.writeInt(-1);
+			dOut.writeInt((int)-1);
 			t.join();
 			timing.thread_cutoff = true;
 			timing.join();
@@ -111,19 +120,19 @@ public class GBNSender {
 			synchronized(Q){
 				if(Q.size() < 4)flag=true;
 			}
-			Thread.sleep(50);
+			//Thread.sleep(50);
 			System.out.println("..");
-			//Thread.yield();
+			Thread.yield();
 		}
-		System.out.println("frame_number : "+frame_number);
-		dOut.writeInt(frame_number);
+		System.out.println("Sender frame_number : "+frame_number);
+		dOut.writeInt((int)frame_number%8);
 		dOut.writeInt((int)str.length());
 		dOut.writeBytes(str);
 		synchronized(Q){
-			Q.add(new Framing(frame_number , System.currentTimeMillis()%10000,str));
+			Q.add(new Framing(frame_number%8 , System.currentTimeMillis()%10000,str));
 		}
 		frame_number++;
-		frame_number%=5;
+		frame_number%=8;
 	}
 	public void CLOSE() throws IOException, InterruptedException{
 		Thread.sleep(100);
@@ -145,13 +154,16 @@ public class GBNSender {
 				synchronized(Q){
 					if(!Q.isEmpty()){
 						Framing f = Q.peek();
+						if(f==null)continue;
 						long cur_time = System.currentTimeMillis()%10000;
 						if(cur_time - f.tim > 500){
 							int SZ = Q.size();
 							for(int i=0;i<SZ;i++){
-								f = Q.remove();
+								f = Q.peek();
+								if(f==null || f.f_number>7)break;
+								Q.remove();
 								try{
-								dOut.writeInt(f.f_number);
+								dOut.writeInt(f.f_number%8);
 								dOut.writeInt((int)f.data.length());
 								dOut.writeBytes(f.data);
 								}catch(IOException e){
