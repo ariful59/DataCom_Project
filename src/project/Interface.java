@@ -12,9 +12,9 @@ import java.io.IOException;
 import java.net.UnknownHostException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.comm.NoSuchPortException;
-import javax.comm.PortInUseException;
-import javax.comm.UnsupportedCommOperationException;
+//import javax.comm.NoSuchPortException;
+//import javax.comm.PortInUseException;
+//import javax.comm.UnsupportedCommOperationException;
 
 import javax.swing.*;
 
@@ -89,7 +89,7 @@ public class Interface extends JFrame{
 		
 		private JLabel textShow;
 		private String strdataLinkScheme[] = {"Hamming Distance" , "CRC"};
-		private String strdataLinkProtocol[] = {"Go back n"};
+		private String strdataLinkProtocol[] = {"Go back n","Selective Repeat"};
 		private String strBlockCoding[] = {"4B/5B"};
 		private String strphysical[] ={"NRZ-L","NRZ-I","RZ","Manchester","Differential Manchester"};
 		private JButton WireLess , Wired; 
@@ -113,7 +113,7 @@ public class Interface extends JFrame{
 			add(textShow);
 			
 			dataLinkProtocol = new JComboBox(strdataLinkProtocol);
-			dataLinkProtocol.setMaximumRowCount(1);
+			dataLinkProtocol.setMaximumRowCount(2);
 			dataLinkProtocol.setSelectedIndex(0); //default selection
 			dataLinkProtocol.addActionListener(new ActionListener(){
 
@@ -208,7 +208,7 @@ public class Interface extends JFrame{
 			add(WireLess);
 			
 			Wired = new JButton("NULL-MODEM CONNECTION");
-			Wired.addActionListener(new ActionListener(){
+			/*Wired.addActionListener(new ActionListener(){
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
@@ -238,7 +238,7 @@ public class Interface extends JFrame{
 
 				}
 				
-			});
+			});*/
 			add(Wired);
 		}
 	}
@@ -252,7 +252,7 @@ public class Interface extends JFrame{
 		
 		private JLabel textShow;
 		private String strdataLinkScheme[] = {"Hamming Distance" , "CRC"};
-		private String strdataLinkProtocol[] = {"Go back n"};
+		private String strdataLinkProtocol[] = {"Go back n" , "Selective Repeat"};
 		private String strBlockCoding[] = {"4B/5B"};
 		private String strphysical[] ={"NRZ-L","NRZ-I","RZ","Manchester","Differential Manchester"};
 		private JButton WireLess,Wired;
@@ -278,7 +278,7 @@ public class Interface extends JFrame{
 			add(textShow);
 			
 			dataLinkProtocol = new JComboBox(strdataLinkProtocol);
-			dataLinkProtocol.setMaximumRowCount(1);
+			dataLinkProtocol.setMaximumRowCount(2);
 			dataLinkProtocol.setSelectedIndex(0); //default selection
 			dataLinkProtocol.addActionListener(new ActionListener(){
 
@@ -369,7 +369,7 @@ public class Interface extends JFrame{
 			add(WireLess);
 			
 			Wired = new JButton("NULL-MODEM CONNECTION");
-			Wired.addActionListener(new ActionListener(){
+			/*Wired.addActionListener(new ActionListener(){
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
@@ -394,7 +394,7 @@ public class Interface extends JFrame{
 
 				}
 				
-			});
+			});*/
 			add(Wired);
 		}
 	}

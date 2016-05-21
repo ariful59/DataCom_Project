@@ -1,4 +1,4 @@
-package project;
+/*package project;
 
 import java.awt.Frame;
 import java.io.File;
@@ -79,3 +79,4 @@ public class ReceiverMainNull extends Frame {
 		}
 	}
 }
+*/

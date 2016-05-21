@@ -28,41 +28,81 @@ public class ReceiverMain extends Frame {
 		Receiver rcvr = new Receiver();
 		int count = 0;
 		String str="";
-		GBNReceive receiving = new GBNReceive();
 		
-		while(!receiving.isEOF()){
-			str = "";
+		//GBNReceive receiving = new GBNReceive();
+		if(SaveSettings.SAVE_DATALINK_PROTOCOL == 1){
+			SRReceiver receiving = new SRReceiver();
 			while(!receiving.isEOF()){
-				str = receiving.getString();
-				if(str.length()>0)break;
-				try {
-					Thread.sleep(50);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
+				str = "";
+				while(!receiving.isEOF()){
+					str = receiving.getString();
+					if(str.length()>0)break;
+					try {
+						Thread.sleep(50);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				count = str.length();
+				System.out.println("receiver Received: " +count);
+				if(count >0){
+					count = 0;
+					str = rcvr.getReceiver(str);
+					System.out.println(str);
+					fout.writeFile(str);
 				}
 			}
-			count = str.length();
-			System.out.println("receiver Received: " +count);
-			if(count >0){
-				count = 0;
+			if(count !=0){
 				str = rcvr.getReceiver(str);
-				System.out.println(str);
 				fout.writeFile(str);
+				count = 0;
+			}
+			System.out.println("receiver finished");
+			fout.closeFile();
+			try {
+				receiving.CLOSE();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 		}
-		if(count !=0){
-			str = rcvr.getReceiver(str);
-			fout.writeFile(str);
-			count = 0;
-		}
-		System.out.println("receiver finished");
-		fout.closeFile();
-		try {
-			receiving.CLOSE();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+		else {
+			GBNReceive receiving = new GBNReceive();
+			while(!receiving.isEOF()){
+				str = "";
+				while(!receiving.isEOF()){
+					str = receiving.getString();
+					if(str.length()>0)break;
+					try {
+						Thread.sleep(50);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				count = str.length();
+				System.out.println("receiver Received: " +count);
+				if(count >0){
+					count = 0;
+					str = rcvr.getReceiver(str);
+					System.out.println(str);
+					fout.writeFile(str);
+				}
+			}
+			if(count !=0){
+				str = rcvr.getReceiver(str);
+				fout.writeFile(str);
+				count = 0;
+			}
+			System.out.println("receiver finished");
+			fout.closeFile();
+			try {
+				receiving.CLOSE();
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 		this.dispose();
 		String conf = JOptionPane.showInputDialog("(receiver)Want to Continue (Y/N)");

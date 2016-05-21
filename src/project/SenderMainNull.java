@@ -1,4 +1,4 @@
-package project;
+/*package project;
 
 
 import java.awt.Frame;
@@ -71,3 +71,4 @@ public class SenderMainNull extends Frame{
 		}
 	}
 }
+*/

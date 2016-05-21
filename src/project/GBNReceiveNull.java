@@ -1,4 +1,4 @@
-package project;
+/*package project;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -106,7 +106,7 @@ public class GBNReceiveNull
                         // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
-                    */
+                    
                     
 
                     return;
@@ -169,3 +169,4 @@ public class GBNReceiveNull
     }
 }
 
+*/
